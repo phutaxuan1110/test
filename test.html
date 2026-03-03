@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.4">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="vi"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;Thiệp bí mật&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;font-family:system-ui;background:#0b0b12;color:#fff}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.card{width:min(520px,92vw);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:20px;padding:22px;backdrop-filter: blur(10px)}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.row{display:flex;gap:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>input{flex:1;padding:12px 14px;border-radius:14px;border:1px solid rgba(255,255,255,.18);background:rgba(0,0,0,.25);color:#fff;font-size:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button{padding:12px 14px;border-radius:14px;border:0;background:#ffffff;color:#111;font-weight:700;cursor:pointer}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.hint{opacity:.75;font-size:13px;margin-top:10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.err{color:#ffb4b4;margin-top:10px;display:none}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.msg{display:none;animation:fade .6s ease}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>@keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.title{font-size:18px;font-weight:800;margin:0 0 10px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.big{font-size:26px;line-height:1.2;font-weight:900;margin:10px 0 6px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sub{opacity:.85;line-height:1.6}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card" id="gate"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="title"&gt;🔒 Nhập mã để mở thiệp&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="row"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;input id="code" inputmode="numeric" autocomplete="one-time-code" placeholder="VD: 1234" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;button onclick="unlock()"&gt;Mở&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="hint"&gt;Gợi ý: mã nằm trên thiệp giấy 😉&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="err" id="err"&gt;Mã chưa đúng. Thử lại nha.&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card msg" id="msg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;p class="title"&gt;💌 Dành cho bạn&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="big"&gt;Chúc bạn một ngày thật rực rỡ ✨&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="sub"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>Cảm ơn bạn đã xuất hiện trong cuộc đời mình. <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">      </span>Mong mọi điều tốt đẹp sẽ đến — và mình luôn ở đây, cổ vũ bạn.</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;br&gt;&lt;br&gt;— Ký tên</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const CORRECT = “832026”; // đổi mã ở đây</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>function unlock(){</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const v = document.getElementById('code').value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const err = document.getElementById('err');</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if(v === CORRECT){</p>
+<p class="p1"><span class="Apple-converted-space">        </span>document.getElementById('gate').style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const msg = document.getElementById('msg');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>msg.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">        </span>err.style.display = 'none';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>err.style.display = 'block';</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
